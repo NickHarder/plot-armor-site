@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plot Armor: privacy</title>
+    <style>
+      body {
+        font: 15px/1.5 system-ui, sans-serif;
+        margin: 0 auto;
+        max-width: 640px;
+        padding: 16px;
+        color: #222;
+        background: #fff;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 17px;
+        margin-top: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The privacy page (UC-07; CMP-01, CMP-03, SEC-01; PV-03). Its wording is the owner's to
+         approve. Everything here is in the extension: the page loads nothing from the network. -->
+    <main>
+      <h1>What Plot Armor reads, keeps and sends</h1>
+      <p>In short: it reads pages inside your browser to find spoilers, keeps your choices in your
+        browser, and sends nothing about you anywhere.</p>
+
+      <h2>What it reads</h2>
+      <p>The text of each page you open, as it loads, including image descriptions and the words in
+        link addresses. It compares that text with the names in the titles you blocked, inside your
+        browser, and blurs the parts that match. It does not run on banks, email or document
+        editors. In sites-only mode it runs only on YouTube and Reddit.</p>
+
+      <h2>What it keeps</h2>
+      <p>In your browser's storage for this extension, and nowhere else: your blocked titles, your
+        own terms, your strict-mode choices, when each block ends, the episode you have watched up to,
+        the teams whose scores you hide, the packs you imported from files, your "Not a spoiler" rules, your answers to "Was I spoiled?", this week's counts, and
+        the last daily file. It reads a pack file only when you choose one, and an exported pack is
+        a file saved where you choose; neither is sent anywhere. A "Not a spoiler" rule holds the
+        name that matched and a short number computed from the blurred text, never the page's
+        address. The popup deletes the rules; removing the extension deletes everything.</p>
+
+      <h2>What it sends</h2>
+      <p>Nothing about you. Once a day it downloads one public file, the trending titles and their
+        packs, from nickharder.github.io: a plain request with no cookies and nothing about you or
+        your browsing in it. Like any download, that server sees your IP address. There are no
+        analytics, no tracking and no AI services.</p>
+
+      <h2>What a site can still see</h2>
+      <p>A site's own code can see that a part of its page is blurred, and could guess from that
+        part's text which show you are avoiding. It cannot see the name that matched or your list:
+        those stay in the extension, out of the site's reach.</p>
+
+      <h2>Why every site</h2>
+      <p>Chrome warns that the extension can "read and change all your data on all websites". It
+        asks for every site because a spoiler can be on any page. It reads only to compare text in
+        your browser, and changes a page only by blurring part of it, never by deleting or
+        rewriting anything. Sites-only mode, in the popup, keeps it to YouTube and Reddit: the
+        permission stays, but the extension no longer runs anywhere else.</p>
+
+      <h2>Where the packs come from</h2>
+      <p>The curated packs are written by hand. Packs for other titles are generated from names
+        only, never plot text: Wikidata (CC0), TVmaze (CC BY-SA) and Fandom wikis (CC BY-SA); they
+        are shared under CC BY-SA. The common-word list is from wordfreq by Robyn Speer (CC BY-SA
+        4.0), and the slur filter's list from "List of Dirty, Naughty, Obscene, and Otherwise Bad
+        Words" (CC BY 4.0).</p>
+    </main>
+  </body>
+</html>
