@@ -5,20 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plot Armor: privacy</title>
     <style>
+      :root {
+        --ink: #1d2a44;
+        --paper: #f5f1e8;
+        --text: #1f2430;
+        --line: #e4ded1;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #e9e4d8;
+          --paper: #141a28;
+          --text: #e9e7e2;
+          --line: #2e384d;
+          color-scheme: dark;
+        }
+      }
       body {
-        font: 15px/1.5 system-ui, sans-serif;
+        background: var(--paper);
+        color: var(--text);
+        font: 15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
         margin: 0 auto;
         max-width: 640px;
-        padding: 16px;
-        color: #222;
-        background: #fff;
+        padding: 24px 20px 40px;
       }
       h1 {
-        font-size: 22px;
+        color: var(--ink);
+        font-size: 24px;
       }
       h2 {
+        border-top: 1px solid var(--line);
+        color: var(--ink);
         font-size: 17px;
-        margin-top: 24px;
+        margin-top: 28px;
+        padding-top: 16px;
+      }
+      a {
+        color: #3b6fd8;
       }
     </style>
   </head>
@@ -49,7 +72,12 @@
       <p>Nothing about you. Once a day it downloads one public file, the trending titles and their
         packs, from nickharder.github.io: a plain request with no cookies and nothing about you or
         your browsing in it. Like any download, that server sees your IP address. There are no
-        analytics, no tracking and no AI services.</p>
+        analytics, no tracking and no AI services. The popup's "Something wrong?" and "Ask for a pack"
+        links open a GitHub issue page filled in with what you typed and the extension's version;
+        nothing is sent unless you submit it there yourself. If you turn on sync in the popup, your
+        blocked titles, your own terms and their settings go through your browser's own sync
+        (Chrome's or Firefox's), like your bookmarks; the packs, your counts and your "Not a
+        spoiler" rules stay on this computer.</p>
 
       <h2>What a site can still see</h2>
       <p>A site's own code can see that a part of its page is blurred, and could guess from that
@@ -65,8 +93,8 @@
 
       <h2>Where the packs come from</h2>
       <p>The curated packs are written by hand. Packs for other titles are generated from names
-        only, never plot text: Wikidata (CC0), TVmaze (CC BY-SA) and Fandom wikis (CC BY-SA); they
-        are shared under CC BY-SA. The common-word list is from wordfreq by Robyn Speer (CC BY-SA
+        only, never plot text: Wikidata (CC0), TVmaze (CC BY-SA), Fandom wikis (CC BY-SA) and
+        Wikipedia's cast lists (CC BY-SA); they are shared under CC BY-SA. The common-word list is from wordfreq by Robyn Speer (CC BY-SA
         4.0), and the slur filter's list from "List of Dirty, Naughty, Obscene, and Otherwise Bad
         Words" (CC BY 4.0).</p>
     </main>
