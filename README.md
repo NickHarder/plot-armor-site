@@ -1,5 +1,8 @@
 # Plot Armor site
 
+**Get Plot Armor on the Chrome Web Store:**
+https://chromewebstore.google.com/detail/plot-armor/lgadnhmifdlafjompobnbaoogfjcjnej
+
 The public files of [Plot Armor](https://nickharder.github.io/plot-armor-site/privacy.html), served
 by GitHub Pages at `https://nickharder.github.io/plot-armor-site/`:
 
